@@ -20,7 +20,6 @@ const HeroSection = () => {
               programação no dia a dia.
             </p>
 
-            {/* CTA Button */}
             <div className={styles.ctaSection}>
               <button className={styles.ctaButton}>COMEÇAR A EXPLORAR</button>
             </div>

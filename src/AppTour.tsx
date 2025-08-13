@@ -34,11 +34,6 @@ const AppTour: React.FC = () => {
     if (status === STATUS.FINISHED || status === STATUS.SKIPPED) {
       setTourActive(false);
       setRun(false);
-      /* if (index === steps.length - 1) {
-        setTimeout(() => {
-          alert("Parabéns, acabou de criar um balde!");
-        }, 400);
-      } */
     }
   };
 
