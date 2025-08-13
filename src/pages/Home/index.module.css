@@ -1,0 +1,105 @@
+.containerHome {
+  --radius: 16px;
+  --shadow: 0 10px 20px rgba(0,0,0,.08);
+  --blue: #4fc3f7; /* LIFO */
+  --green: #81c784; /* FIFO */
+  --bg: #f9fbfd;
+  background: var(--bg);
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.headerHome {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.logoHome { font-size: 28px; }
+.sloganHome { color: #2e7d32; font-weight: 600; }
+
+.hero { 
+  display: grid; 
+  grid-template-columns: 1.2fr 1fr; 
+  gap: 24px; 
+  padding: 28px 16px; 
+  max-width: 1100px; 
+  margin: 0 auto;
+}
+
+.heroLeft { align-self: center; }
+.title { font-size: clamp(24px, 3.2vw, 40px); margin: 0 0 8px; }
+.subtitle { font-size: 18px; margin: 0 0 16px; }
+.helper { opacity: .8; margin-top: 8px; }
+
+.ctaRow { display: flex; gap: 12px; flex-wrap: wrap; }
+.ctaBtn {
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  box-shadow: var(--shadow);
+  transform: translateY(0);
+  transition: transform .15s ease, filter .15s ease;
+}
+.ctaBtn:active { transform: translateY(1px); }
+.ctaPrimary { background: var(--blue); }
+.ctaSecondary { background: var(--green); }
+
+.heroRight { display: flex; justify-content: center; }
+.mascotCard {
+  background: white; border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 16px; max-width: 360px; text-align: center;
+}
+.mascot { font-size: 56px; }
+.bucketsPair { display: flex; justify-content: center; gap: 12px; font-size: 28px; }
+.mascotSpeech { margin-top: 8px; font-weight: 600; }
+
+.cardsSection {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px; max-width: 1100px; margin: 8px auto 0; padding: 0 16px 24px;
+}
+.infoCard {
+  background: white; border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 16px; display: grid; align-content: start; gap: 8px;
+}
+.cardLifo { border: 2px solid var(--blue); }
+.cardFifo { border: 2px solid var(--green); }
+.cardTitle { margin: 0; }
+.cardText { margin: 0; }
+.cardList { margin: 4px 0 0; padding-left: 18px; }
+.cardLink { 
+  justify-self: start; margin-top: 8px; text-decoration: none; font-weight: 700;
+  color: #0d47a1; border-bottom: 2px solid transparent; padding-bottom: 2px;
+}
+.cardLink:hover { border-color: #0d47a1; }
+
+.educationStrip {
+  margin: 12px auto 20px; max-width: 1100px; padding: 0 16px; 
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;
+}
+.eduItem { 
+  background: #ffffff; border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 14px;
+}
+
+.footerHome {
+  display: grid; place-items: center; padding: 14px; color: #555; background: white;
+}
+
+/* Pequenas interações */
+.ctaBtn:hover { filter: brightness(1.05); }
+.infoCard:hover { transform: translateY(-2px); transition: transform .15s ease; }
+
+/* Responsivo */
+@media (max-width: 840px) {
+  .hero { grid-template-columns: 1fr; }
+  .mascotCard { max-width: 100%; }
+}
