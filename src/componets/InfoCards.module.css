@@ -20,17 +20,48 @@
   }
 }
 
+@keyframes cardFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes cardFloat {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.02);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
 .card {
   background-color: white;
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.2s ease-in-out;
+  opacity: 0;
+  animation:
+    cardFadeIn 0.8s cubic-bezier(.4,1.7,.6,.97) forwards,
+    cardFloat 3s ease-in-out 0.8s infinite;
 }
 
 .card:hover {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
+
+.card:nth-child(1) { animation-delay: 0.1s, 0.8s; }
+.card:nth-child(2) { animation-delay: 0.3s, 0.8s; }
+.card:nth-child(3) { animation-delay: 0.5s, 0.8s; }
 
 .cardContent {
   padding: 2rem;

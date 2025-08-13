@@ -3,7 +3,8 @@ import LifoBalde from "./LIFO";
 import FifoBalde from "./FIFO";
 import styles from './index.module.css';
 import Header from "../../componets/Header";
-
+import { useContext } from "react";
+import { TourContext } from "../../contexts/TourContext";
 type BaldeType = "LIFO" | "FIFO";
 
 interface Balde {
@@ -13,17 +14,25 @@ interface Balde {
 }
 
 const Baldes = () => {
+const { setTourActive } = useContext(TourContext);
   const [baldes, setBaldes] = useState<Balde[]>([]);
   const [novoTipo, setNovoTipo] = useState<BaldeType>("LIFO");
   const [contador, setContador] = useState(1);
 
   const adicionarBalde = (e: React.FormEvent) => {
     e.preventDefault();
+    setTourActive((item) =>{
+        if(item)
+            alert("🎉🎉 Boa acabou de criar um balde.")
+
+        return false
+  })
     setBaldes((prev) => [
       ...prev,
       { id: contador, tipo: novoTipo, elementos: [] },
     ]);
     setContador((c) => c + 1);
+    
   };
 
   const removerBalde = (id: number) => {
@@ -70,11 +79,14 @@ const Baldes = () => {
             borderRadius: "8px",
             boxShadow: "0 2px 8px #0001"
           }}
+
+          id="tour-form-add-balde"
         >
           <div style={{margin: "auto"}}>
               <label style={{ fontWeight: 500 }}>
                 <span>Tipo:</span>
                 <select
+                id="tour-select-tipo"
                   value={novoTipo}
                   onChange={(e) => setNovoTipo(e.target.value as BaldeType)}
                   style={{
@@ -91,6 +103,7 @@ const Baldes = () => {
               <button
                 type="submit"
                 className={styles.filterButton}
+                 id="tour-btn-add-balde"
               >
                 Criar novo balde
               </button>
@@ -174,3 +187,5 @@ const Baldes = () => {
 };
 
 export default Baldes;
+
+

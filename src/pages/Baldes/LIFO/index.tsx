@@ -48,7 +48,7 @@ const LifoBalde: React.FC<Props> = ({ elementos, onAdicionar, onRemover, id }) =
         {elementos.length === 0 ? (
           <div className={styles.baldeVazio}>O balde está seco 😢</div>
         ) : (
-          [...elementos].reverse().map((el, idx) => (
+          elementos.map((el, idx) => (
             <div key={idx} className={styles.baldeAgua}>
               💧 {el}L {idx === 0 && <span className={styles.topo}>⬆ Topo</span>}
             </div>

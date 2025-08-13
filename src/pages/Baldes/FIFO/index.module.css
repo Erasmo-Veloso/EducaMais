@@ -43,9 +43,11 @@
 }
 
 .baldeStack {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
   align-items: center;
+  justify-items: center;
 }
 
 .baldeAgua {
