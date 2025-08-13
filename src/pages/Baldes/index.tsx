@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import LifoBalde from "./LIFO";
 import FifoBalde from "./FIFO";
 import styles from './index.module.css';
+import Header from "../../componets/Header";
 
 type BaldeType = "LIFO" | "FIFO";
 
@@ -50,6 +51,7 @@ const Baldes = () => {
 
   return (
     <div className={styles.container}>
+    <Header/>
       <h1>Baldes Dinâmicos</h1>
       <form onSubmit={adicionarBalde} style={{ marginBottom: "2rem" }}>
         <label>
