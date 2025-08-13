@@ -21,7 +21,7 @@ const LifoBalde: React.FC<Props> = ({ elementos, onAdicionar, onRemover, id }) =
 
   return (
     <div className={styles.baldeContainer}>
-      <h3 className={styles.baldeTitulo}>🪣 Balde LIFO (ID: {id})</h3>
+      <h3 className={styles.baldeTitulo}>🪣 Balde LIFO</h3>
       
       <form onSubmit={handleAdd} className={styles.baldeForm}>
         <input

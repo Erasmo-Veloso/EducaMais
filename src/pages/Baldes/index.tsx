@@ -26,6 +26,10 @@ const Baldes = () => {
     setContador((c) => c + 1);
   };
 
+  const removerBalde = (id: number) => {
+    setBaldes((prev) => prev.filter((balde) => balde.id !== id));
+  };
+
   const adicionarElemento = (id: number, valor: number) => {
     setBaldes((prev) =>
       prev.map((balde) =>
@@ -50,29 +54,75 @@ const Baldes = () => {
   };
 
   return (
-    <div className={styles.container}>
-    <Header/>
-      <h1>Baldes Dinâmicos</h1>
-      <form onSubmit={adicionarBalde} style={{ marginBottom: "2rem" }}>
-        <label>
-          Tipo:
-          <select
-            value={novoTipo}
-            onChange={(e) => setNovoTipo(e.target.value as BaldeType)}
-          >
-            <option value="LIFO">LIFO</option>
-            <option value="FIFO">FIFO</option>
-          </select>
-        </label>
-        <button type="submit">Criar novo balde</button>
-      </form>
-
-      <h1>LIFO</h1>
-      <div className={styles.baldesRow}>
-        {baldes.map(
-          (balde) =>
-            balde.tipo === "LIFO" && (
-              <div className={styles.baldeCard} key={balde.id}>
+    <div>
+      <Header />
+      <div className={styles.container}>
+        <h1>Baldes Dinâmicos</h1>
+        <form
+          onSubmit={adicionarBalde}
+          style={{
+            marginBottom: "2rem",
+            display: "flex",
+            alignItems: "center",
+            gap: "1rem",
+            background: "#f5f5f5",
+            padding: "1rem",
+            borderRadius: "8px",
+            boxShadow: "0 2px 8px #0001"
+          }}
+        >
+          <div style={{margin: "auto"}}>
+              <label style={{ fontWeight: 500 }}>
+                <span>Tipo:</span>
+                <select
+                  value={novoTipo}
+                  onChange={(e) => setNovoTipo(e.target.value as BaldeType)}
+                  style={{
+                    marginLeft: "0.5rem",
+                    padding: "0.3rem 0.7rem",
+                    borderRadius: "4px",
+                    border: "1px solid #ccc"
+                  }}
+                >
+                  <option value="LIFO">LIFO</option>
+                  <option value="FIFO">FIFO</option>
+                </select>
+              </label>
+              <button
+                type="submit"
+                className={styles.filterButton}
+              >
+                Criar novo balde
+              </button>
+          </div>
+        </form>
+        <h1>Seus baldes LIFO</h1>
+        <div className={styles.baldesRow}>
+          {baldes
+            .filter((balde) => balde.tipo === "LIFO")
+            .map((balde) => (
+              <div className={styles.baldeCard} key={balde.id} style={{ position: "relative" }}>
+                <button
+                  onClick={() => removerBalde(balde.id)}
+                  style={{
+                    position: "absolute",
+                    top: 8,
+                    right: 8,
+                    background: "#ef4444",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: "50%",
+                    width: "28px",
+                    height: "28px",
+                    cursor: "pointer",
+                    fontWeight: "bold",
+                    fontSize: "1rem",
+                    lineHeight: "1"
+                  }}
+                  title="Remover balde"
+                >
+                  ×
+                </button>
                 <LifoBalde
                   id={balde.id}
                   elementos={balde.elementos}
@@ -80,15 +130,35 @@ const Baldes = () => {
                   onRemover={() => removerElemento(balde.id)}
                 />
               </div>
-            )
-        )}
-      </div>
-      <h1>FIFO</h1>
-      <div className={styles.baldesRow}>
-        {baldes.map(
-          (balde) =>
-            balde.tipo === "FIFO" && (
-              <div className={styles.baldeCard} key={balde.id}>
+            ))}
+        </div>
+        <h1>Seus baldes FIFO</h1>
+        <div className={styles.baldesRow}>
+          {baldes
+            .filter((balde) => balde.tipo === "FIFO")
+            .map((balde) => (
+              <div className={styles.baldeCard} key={balde.id} style={{ position: "relative" }}>
+                <button
+                  onClick={() => removerBalde(balde.id)}
+                  style={{
+                    position: "absolute",
+                    top: 8,
+                    right: 8,
+                    background: "#ef4444",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: "50%",
+                    width: "28px",
+                    height: "28px",
+                    cursor: "pointer",
+                    fontWeight: "bold",
+                    fontSize: "1rem",
+                    lineHeight: "1"
+                  }}
+                  title="Remover balde"
+                >
+                  ×
+                </button>
                 <FifoBalde
                   id={balde.id}
                   elementos={balde.elementos}
@@ -96,8 +166,8 @@ const Baldes = () => {
                   onRemover={() => removerElemento(balde.id)}
                 />
               </div>
-            )
-        )}
+            ))}
+        </div>
       </div>
     </div>
   );

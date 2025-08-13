@@ -1,8 +1,8 @@
 .container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 2.5rem;
+  background-color: hsl(0 0% 97%);
+  color: hsl(220 15% 25%);
 }
 
 .baldesRow {
@@ -16,10 +16,8 @@
   flex: 1 1 250px;
   min-width: 220px;
   max-width: 350px;
-  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
-  background: #fafafa;
   margin-bottom: 1rem;
 }
 
@@ -34,11 +32,33 @@
 }
 
 @media (max-width: 500px) {
-  .container {
-    padding: 0.5rem;
-  }
+  
   .baldeCard {
     padding: 0.5rem;
     font-size: 0.95rem;
   }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 1.5rem;
+  }
+}
+
+
+.filterButton {
+  background-color: hsl(120 65% 55%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.filterButton:hover {
+  background-color: hsl(120 65% 50%);
 }
