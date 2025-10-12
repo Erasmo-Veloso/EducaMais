@@ -1,0 +1,65 @@
+/* Global styles and design tokens */
+.background {
+  background-color: hsl(0 0% 97%);
+}
+
+.textDark {
+  color: hsl(220 15% 25%);
+}
+
+.textMuted {
+  color: hsl(220 10% 50%);
+}
+
+.brandGreen {
+  background-color: hsl(120 65% 55%);
+  color: white;
+}
+
+.brandRed {
+  background-color: hsl(0 75% 60%);
+  color: white;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.cardHover:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.buttonGreen {
+  background-color: hsl(120 65% 55%);
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.buttonGreen:hover {
+  background-color: hsl(120 65% 50%);
+}
+
+.buttonLarge {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.buttonSmall {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}

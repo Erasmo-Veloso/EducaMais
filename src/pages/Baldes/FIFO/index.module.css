@@ -1,0 +1,74 @@
+.baldeContainer {
+  border: 2px solid #81c784;
+  padding: 1rem;
+  min-width: 220px;
+  text-align: center;
+  border-radius: 12px;
+  background-color: #f1f8e9;
+}
+
+.baldeTitulo {
+  margin-bottom: 10px;
+  color: #2e7d32;
+}
+
+.baldeForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.baldeInput {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+}
+
+.baldeButton {
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.add {
+  background-color: #43a047;
+}
+
+.remove {
+  background-color: #f44336;
+}
+
+.baldeStack {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  align-items: center;
+  justify-items: center;
+}
+
+.baldeAgua {
+  background-color: #81c784;
+  color: white;
+  padding: 8px;
+  margin: 2px 0;
+  border-radius: 50px;
+  min-width: 80px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.frente {
+  font-size: 0.8rem;
+  margin-left: 5px;
+  color: yellow;
+}
+
+.baldeVazio {
+  font-style: italic;
+  color: #555;
+}

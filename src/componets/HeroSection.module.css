@@ -1,0 +1,179 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background-color: hsl(0 0% 97%);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeInUp 1s cubic-bezier(.4,1.7,.6,.97) forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+.joinUsSection {
+  margin-bottom: 2rem;
+}
+
+.joinUsLink {
+  color: hsl(120 65% 55%);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.joinUsLink:hover {
+  text-decoration: underline;
+}
+
+.mainHeading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: hsl(220 15% 25%);
+  line-height: 1.1;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .mainHeading {
+    font-size: 3.75rem;
+  }
+}
+
+.subtext {
+  font-size: 1.125rem;
+  color: hsl(220 10% 50%);
+  margin: 0;
+}
+
+.ctaSection {
+  padding-top: 1rem;
+}
+
+.ctaButton {
+  background-color: hsl(120 65% 55%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  animation: fadeInUp 1.2s cubic-bezier(.4,1.7,.6,.97) forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+.ctaButton:hover {
+  background-color: hsl(120 65% 50%);
+}
+
+.rightImageSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundElements {
+  position: absolute;
+  inset: 0;
+}
+
+.purpleCircle1 {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d8b4fe, #a855f7);
+  opacity: 0.6;
+  animation: float 4s ease-in-out infinite;
+}
+
+.purpleCircle2 {
+  position: absolute;
+  top: 5rem;
+  left: 2.5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fbb6ce, #a855f7);
+  opacity: 0.5;
+  animation: float 4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.purpleCircle3 {
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #93c5fd, #a855f7);
+  opacity: 0.4;
+  animation: float 4s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.flowingSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mainIllustration {
+  position: relative;
+  z-index: 10;
+  animation: float 3.5s ease-in-out infinite;
+}
+
+.illustrationImage {
+  width: 100%;
+  max-width: 28rem;
+  height: auto;
+  object-fit: cover;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
+}
