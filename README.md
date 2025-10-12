@@ -1,5 +1,7 @@
 # Baldes COD
 
+Demo: [https://educa-mais-gq2d.vercel.app/](https://educa-mais-gq2d.vercel.app/)
+
 Bem-vindo ao **Baldes COD**!  
 Este mini-app foi criado para ensinar, de forma interativa e divertida, os conceitos de Estruturas de Dados LIFO (Stack) e FIFO (Queue) — fundamentais para quem está começando a programar ou quer revisar lógica de dados.
 
@@ -70,9 +72,9 @@ Feito com carinho para a **Coding Angola** por Erasmo Veloso.
 
 ## 📸 Screenshots
 
-![Home](/Home.png)
-![Baldes](/Baldes.png)
-![Guias](/Guia.png)
+![Home](public/Home.png)
+![Baldes](public/Baldes.png)
+![Guias](public/Guia.png)
 
 ---
 
