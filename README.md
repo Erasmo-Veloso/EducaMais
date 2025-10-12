@@ -70,9 +70,9 @@ Feito com carinho para a **Coding Angola** por Erasmo Veloso.
 
 ## 📸 Screenshots
 
-![Home](./src/assets/Home.png)
-![Baldes](./src/assets/Baldes.png)
-![Guias](./src/assets/Guia.png)
+![Home](/Home.png)
+![Baldes](/Baldes.png)
+![Guias](/Guia.png)
 
 ---
 

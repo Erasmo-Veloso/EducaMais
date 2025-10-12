@@ -65,7 +65,7 @@ const HeroSection = () => {
             {/* Main illustration */}
             <div className={styles.mainIllustration}>
               <img
-                src="src/assets/Placeholder.png"
+                src="/Placeholder.png"
                 alt="Student with graduation cap holding an apple"
                 className={styles.illustrationImage}
               />
