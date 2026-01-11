@@ -9,9 +9,9 @@ Este mini-app foi criado para ensinar, de forma interativa e divertida, os conce
 
 ## 🚀 Demonstração
 
-- **Tour guiado:** Ao clicar em "Começar a explorar", você será conduzido por um tour interativo que explica cada parte do app.
-- **Crie e manipule baldes:** Adicione quantos baldes quiser, escolha entre LIFO ou FIFO, insira e remova elementos visualmente.
-- **Animações suaves:** Cards e elementos animados para uma experiência moderna e agradável.
+- **Tour guiado:** Ao clicar em "Começar a explorar", você será conduzido por um tour interativo que explica cada parte do app;
+- **Crie e manipule baldes:** Adicione quantos baldes quiser, escolha entre LIFO ou FIFO, insira e remova elementos visualmente;
+- **Animações suaves:** Cards e elementos animados para uma experiência moderna e agradável;
 - **Responsivo:** Funciona bem em qualquer dispositivo.
 
 ---
